@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useTable, useSortBy } from "react-table";
-import MOCK_DATA from "./tableData.json";
+import MOCK_DATA from "./mockData.json";
 import { COLUMNS } from "./columns";
 import "./table.css";
 

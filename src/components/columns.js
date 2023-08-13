@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 export const COLUMNS = [
   {
     Header: "Id",
@@ -20,14 +21,17 @@ export const COLUMNS = [
     accessor: "email",
   },
   {
-    Header: "Gender",
-    Footer: "Gender",
-    accessor: "gender",
+    Header: "Phone",
+    Footer: "Phone",
+    accessor: "phone",
   },
   {
-    Header: "Ip",
-    Footer: "Ip",
-    accessor: "ip_address",
+    Header: "Date of Birth",
+    Footer: "Date of Birth",
+    accessor: "date_of_birth",
+    cell: ({ value }) => {
+      return format(new Date(value), "dd/MM/yyyy");
+    },
   },
 ];
 
@@ -63,14 +67,14 @@ export const GROUPED_COLUMNS = [
         accessor: "email",
       },
       {
-        Header: "Gender",
-        Footer: "Gender",
-        accessor: "gender",
+        Header: "Phone",
+        Footer: "Phone",
+        accessor: "phone",
       },
       {
-        Header: "Ip",
-        Footer: "Ip",
-        accessor: "ip_address",
+        Header: "Date of Birth",
+        Footer: "Date of Birth",
+        accessor: "date_of_birth",
       },
     ],
   },
